@@ -252,6 +252,39 @@
   <footer>
     <p>© 2026 Siddharth Playway School. All Rights Reserved.</p>
   </footer>
+  <section id="results">
+  <h2>📝 Test & Quiz Results</h2>
+
+  <input type="text" id="studentName" placeholder="Student Name">
+  <input type="text" id="studentClass" placeholder="Class">
+  <input type="text" id="subject" placeholder="Subject">
+  <input type="number" id="marks" placeholder="Obtained Marks">
+  <input type="number" id="total" placeholder="Total Marks">
+
+  <button onclick="showResult()">View Result</button>
+
+  <div id="resultBox"></div>
+</section>
+
+<script>
+function showResult() {
+  let name = document.getElementById("studentName").value;
+  let studentClass = document.getElementById("studentClass").value;
+  let subject = document.getElementById("subject").value;
+  let marks = Number(document.getElementById("marks").value);
+  let total = Number(document.getElementById("total").value);
+
+  let percentage = (marks / total) * 100;
+
+  document.getElementById("resultBox").innerHTML =
+    "<h3>🎉 Result</h3>" +
+    "<p>Name: " + name + "</p>" +
+    "<p>Class: " + studentClass + "</p>" +
+    "<p>Subject: " + subject + "</p>" +
+    "<p>Marks: " + marks + " / " + total + "</p>" +
+    "<p>Percentage: " + percentage.toFixed(1) + "%</p>";
+}
+</script>
 
 </body>
 </html>
