@@ -284,6 +284,54 @@ function showResult() {
     "<p>Marks: " + marks + " / " + total + "</p>" +
     "<p>Percentage: " + percentage.toFixed(1) + "%</p>";
 }
+  <section id="student-id">
+  <h2>🎫 Student ID Card Generator</h2>
+
+  <input type="text" id="idName" placeholder="Student Name">
+  <input type="text" id="idClass" placeholder="Class">
+
+  <button onclick="generateID()">Generate ID Card</button>
+
+  <div id="idCard" style="margin-top:20px;"></div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+function generateID() {
+  let name = document.getElementById("idName").value;
+  let studentClass = document.getElementById("idClass").value;
+
+  if (!name || !studentClass) {
+    alert("Please enter Student Name and Class");
+    return;
+  }
+
+  let studentID = "SPS-" + Math.floor(1000 + Math.random() * 9000);
+
+  document.getElementById("idCard").innerHTML = `
+    <div style="width:320px; padding:20px; border:2px solid #333;
+                border-radius:15px; text-align:center;">
+      <h2>Siddharth Playway School</h2>
+      <p><b>Student ID Card</b></p>
+
+      <p><b>Name:</b> ${name}</p>
+      <p><b>Class:</b> ${studentClass}</p>
+      <p><b>ID:</b> ${studentID}</p>
+
+      <div id="qrcode" style="margin:15px auto;"></div>
+
+      <p>Scan QR Code for Student Information</p>
+    </div>
+  `;
+
+  new QRCode(document.getElementById("qrcode"), {
+    text: studentID,
+    width: 120,
+    height: 120
+  });
+}
+
   
 </script>
 
