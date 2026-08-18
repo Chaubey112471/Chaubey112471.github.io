@@ -77,3 +77,181 @@
       color: white;
       padding: 12px 25px;
       border-radius: 25px;
+            text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #1565c0;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 280px;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px #ddd;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #1565c0;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      background: #1565c0;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #123;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🏫 Siddharth Playway School</h1>
+    <p>Learning Today • Leading Tomorrow</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#classes">Classes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Welcome to Siddharth Playway School</h2>
+
+    <p>
+      We provide quality education in a safe, friendly and joyful
+      learning environment. Our focus is on the overall development
+      of every child through play-way learning, phonics and creative activities.
+    </p>
+
+    <a href="#contact" class="button">Contact Us</a>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Our School</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>👩‍🏫 Expert Teachers</h3>
+        <p>
+          Experienced and dedicated teachers guide every child
+          towards better learning and development.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Play-Way Learning</h3>
+        <p>
+          Children learn through fun activities, games,
+          creativity and practical experiences.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📚 Phonics Learning</h3>
+        <p>
+          Special focus on phonics and strong foundational
+          learning for young learners.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="classes">
+    <h2>Our Classes</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Nursery</h3>
+        <p>Fun-based early childhood learning.</p>
+      </div>
+
+      <div class="card">
+        <h3>LKG</h3>
+        <p>Strong foundation with creative activities.</p>
+      </div>
+
+      <div class="card">
+        <h3>UKG</h3>
+        <p>Phonics, activities and school readiness.</p>
+      </div>
+
+      <div class="card">
+        <h3>Other Classes</h3>
+        <p>Guidance and learning support for students.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <p>📞 Phone: 9958670331</p>
+    <p>📧 Email: st1352561@gmail.com</p>
+    <p>📍 Address: Gali No. 6</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Siddharth Playway School. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
