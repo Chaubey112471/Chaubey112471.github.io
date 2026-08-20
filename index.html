@@ -1,1507 +1,1799 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siddharth Playway School</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+<title>Siddharth Playway School | Sahibabad Ghaziabad</title>
+
+<meta name="description"
+content="Siddharth Playway School - Quality education, play-way learning and child development in Sahibabad, Ghaziabad, Uttar Pradesh.">
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8ff;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#0d47a1,#1976d2,#42a5f5);
+    color:white;
+    text-align:center;
+    padding:45px 15px;
+}
+
+.logo{
+    font-size:55px;
+}
+
+header h1{
+    font-size:38px;
+    margin:5px 0;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+    padding:14px 8px;
+    text-align:center;
+}
+
+nav a{
+    display:inline-block;
+    color:#0d47a1;
+    text-decoration:none;
+    margin:5px 9px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ff9800;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    background:
+    linear-gradient(rgba(227,242,253,.92),rgba(255,255,255,.95));
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h2{
+    font-size:42px;
+    color:#0d47a1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:19px;
+}
+
+.buttons{
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    margin:6px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.btn-primary{
+    background:#1565c0;
+    color:white;
+}
+
+.btn-orange{
+    background:#ff9800;
+    color:white;
+}
+
+.btn-green{
+    background:#25d366;
+    color:white;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:65px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#1565c0;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+.section-title span{
+    color:#ff9800;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:28px 20px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card .icon{
+    font-size:45px;
+}
+
+.card h3{
+    color:#1565c0;
+    margin:12px 0;
+}
+
+/* ================= VIDEO ================= */
+
+.video-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.video-box video{
+    width:100%;
+    max-height:500px;
+    border-radius:15px;
+    background:#000;
+}
+
+.video-note{
+    margin-top:12px;
+    color:#666;
+}
+
+/* ================= VOICE ================= */
+
+.voice-box{
+    max-width:750px;
+    margin:auto;
+    background:linear-gradient(135deg,#fff3e0,#e3f2fd);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.voice-box p{
+    margin-bottom:18px;
+}
+
+.voice-btn{
+    background:#e91e63;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:30px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ================= RESULT ================= */
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.input{
+    width:100%;
+    padding:13px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.result-box{
+    display:none;
+    margin-top:25px;
+    background:#e8f5e9;
+    border-left:6px solid #2e7d32;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* ================= ID GENERATOR ================= */
+
+.id-generator{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.id-card{
+    width:360px;
+    min-height:520px;
+    margin:30px auto;
+    background:white;
+    border:4px solid #1565c0;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.id-card img{
+    width:115px;
+    height:135px;
+    object-fit:cover;
+    border:3px solid #1565c0;
+    border-radius:10px;
+    margin:15px;
+}
+
+.id-details{
+    text-align:left;
+    padding:10px 20px;
+}
+
+/* ================= TEACHER ================= */
+
+.admin-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.teacher-panel{
+    display:none;
+}
+
+.login-message{
+    color:red;
+    margin-top:10px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:linear-gradient(135deg,#1565c0,#0d47a1);
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.contact h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:8px;
+    font-size:17px;
+}
+
+.contact a{
+    color:white;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer p{
+    margin:5px;
+}
+
+/* ================= FLOATING BUTTON ================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25d366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+    z-index:2000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:28px;
     }
 
-    body {
-      background: #f4f8ff;
-      color: #222;
-      line-height: 1.6;
+    .hero h2{
+        font-size:30px;
     }
 
-    header {
-      background: linear-gradient(135deg, #1565c0, #42a5f5);
-      color: white;
-      text-align: center;
-      padding: 40px 15px;
+    .hero p{
+        font-size:16px;
     }
 
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+    nav{
+        padding:10px 5px;
     }
 
-    header p {
-      font-size: 17px;
+    nav a{
+        font-size:13px;
+        margin:4px;
     }
 
-    nav {
-      background: white;
-      padding: 14px 8px;
-      text-align: center;
-      box-shadow: 0 2px 8px #ccc;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .section{
+        padding:45px 15px;
     }
 
-    nav a {
-      color: #1565c0;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
+    .section-title{
+        font-size:26px;
     }
 
-    .hero {
-      text-align: center;
-      padding: 65px 20px;
-      background: #e3f2fd;
+    .card{
+        width:100%;
+        max-width:350px;
     }
 
-    .hero h2 {
-      font-size: 30px;
-      color: #0d47a1;
-      margin-bottom: 15px;
+    .id-card{
+        width:100%;
+        max-width:360px;
+    }
+}
+
+/* ================= PRINT ================= */
+
+@media print{
+
+    body *{
+        visibility:hidden;
     }
 
-    .hero p {
-      max-width: 750px;
-      margin: auto;
-      font-size: 18px;
+    #printArea,
+    #printArea *{
+        visibility:visible;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      background: #ff9800;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
-            text-decoration: none;
-      font-weight: bold;
+    #printArea{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
     }
 
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+}
 
-    .section h2 {
-      text-align: center;
-      color: #1565c0;
-      margin-bottom: 25px;
-      font-size: 28px;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      width: 280px;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px #ddd;
-      text-align: center;
-    }
-
-    .card h3 {
-      color: #1565c0;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      background: #1565c0;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
-
-    .contact h2 {
-      margin-bottom: 20px;
-    }
-
-    footer {
-      background: #123;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 25px;
-      }
-
-      .hero h2 {
-        font-size: 25px;
-      }
-
-      nav a {
-        margin: 0 5px;
-        font-size: 14px;
-      }
-
-      .card {
-        width: 100%;
-        max-width: 350px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🏫 Siddharth Playway School</h1>
-    <p>Learning Today • Leading Tomorrow</p>
-  </header>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-  <nav>
+<header>
+
+    <div class="logo">🏫</div>
+
+    <h1>Siddharth Playway School</h1>
+
+    <p>Learning Today • Leading Tomorrow</p>
+
+    <p>
+        📍 Gali No. 6, Sahibabad, Ghaziabad, Uttar Pradesh
+    </p>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#classes">Classes</a>
+    <a href="#video">Video</a>
+    <a href="#results">Results</a>
+    <a href="#student-id">Student ID</a>
+    <a href="#teachers">Teachers</a>
     <a href="#contact">Contact</a>
-  </nav>
 
-  <section class="hero" id="home">
-    <h2>Welcome to Siddharth Playway School</h2>
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h2>Welcome to Siddharth Playway School 🎓</h2>
+
+        <p>
+            A safe, joyful and caring learning environment
+            where children learn through play, creativity,
+            phonics and meaningful activities.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#classes" class="btn btn-primary">
+                📚 Explore Classes
+            </a>
+
+            <a href="#contact" class="btn btn-orange">
+                📞 Contact School
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
+
+    <h2 class="section-title">
+        About <span>Our School</span>
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">👩‍🏫</div>
+
+            <h3>Dedicated Teachers</h3>
+
+            <p>
+                Caring and dedicated teachers help children
+                develop confidence and strong learning habits.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎨</div>
+
+            <h3>Play-Way Learning</h3>
+
+            <p>
+                Fun games, activities and creativity make
+                learning enjoyable for every child.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📚</div>
+
+            <h3>Phonics Learning</h3>
+
+            <p>
+                Strong focus on early reading, phonics,
+                vocabulary and communication skills.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">❤️</div>
+
+            <h3>Caring Environment</h3>
+
+            <p>
+                A friendly and safe environment where
+                children can learn and grow confidently.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CLASSES
+===================================================== -->
+
+<section class="section" id="classes">
+
+    <h2 class="section-title">
+        🎓 Our <span>Classes</span>
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🧸</div>
+            <h3>Play Group</h3>
+            <p>
+                Fun activities and early social learning.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌈</div>
+            <h3>Nursery</h3>
+            <p>
+                Foundation learning through play and activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✏️</div>
+            <h3>LKG</h3>
+            <p>
+                Creative learning, numbers, alphabets and phonics.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎒</div>
+            <h3>UKG</h3>
+            <p>
+                School readiness and strong academic foundation.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📖</div>
+            <h3>Class 1</h3>
+            <p>
+                Strong basics in English, Maths and EVS.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📘</div>
+            <h3>Class 2</h3>
+            <p>
+                Better concepts, reading and problem solving.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📗</div>
+            <h3>Class 3</h3>
+            <p>
+                Concept-based learning and activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Other Classes</h3>
+            <p>
+                Academic guidance and learning support.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCHOOL VIDEO
+===================================================== -->
+
+<section class="section" id="video">
+
+    <h2 class="section-title">
+        🎬 School <span>Video</span>
+    </h2>
+
+    <div class="video-box">
+
+        <!--
+        IMPORTANT:
+        Apni video ka naam "school-video.mp4" rakhein
+        aur isi folder mein upload karein.
+        -->
+
+        <video controls poster="">
+
+            <source src="school-video.mp4" type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+        <p class="video-note">
+            🎥 Siddharth Playway School - School Activities
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEMALE VOICE
+===================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        🔊 School <span>Welcome Voice</span>
+    </h2>
+
+    <div class="voice-box">
+
+        <p>
+            Click the button to hear the Siddharth Playway
+            School welcome message.
+        </p>
+
+        <button class="voice-btn" onclick="speakWelcome()">
+            🔊 सुनें — School Welcome
+        </button>
+
+        <button
+            class="voice-btn"
+            onclick="stopVoice()"
+            style="background:#555;margin-left:8px;">
+            ⏹ Stop
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESULTS
+===================================================== -->
+
+<section class="section" id="results">
+
+    <h2 class="section-title">
+        📝 Student <span>Result</span>
+    </h2>
+
+    <div class="form-box">
+
+        <input
+            class="input"
+            type="text"
+            id="studentName"
+            placeholder="Student Name">
+
+        <input
+            class="input"
+            type="text"
+            id="studentClass"
+            placeholder="Class">
+
+        <input
+            class="input"
+            type="text"
+            id="subject"
+            placeholder="Subject">
+
+        <input
+            class="input"
+            type="number"
+            id="marks"
+            placeholder="Obtained Marks">
+
+        <input
+            class="input"
+            type="number"
+            id="total"
+            placeholder="Total Marks">
+
+        <button
+            class="btn btn-primary"
+            onclick="showResult()">
+            🎉 View Result
+        </button>
+
+        <div id="resultBox" class="result-box"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STUDENT ID
+===================================================== -->
+
+<section class="section" id="student-id">
+
+    <h2 class="section-title">
+        🎫 Student <span>ID Card Generator</span>
+    </h2>
+
+    <div class="id-generator">
+
+        <input
+            class="input"
+            id="idName"
+            placeholder="Student Name">
+
+        <input
+            class="input"
+            id="idClass"
+            placeholder="Class">
+
+        <input
+            class="input"
+            id="idDob"
+            type="date">
+
+        <input
+            class="input"
+            id="idPhone"
+            placeholder="Parent Contact Number">
+
+        <label>
+            <b>Student Photo:</b>
+        </label>
+
+        <input
+            class="input"
+            id="idPhoto"
+            type="file"
+            accept="image/*">
+
+        <button
+            class="btn btn-primary"
+            onclick="generateStudentID()">
+            🎫 Generate Student ID
+        </button>
+
+        <div id="studentIDOutput"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TEACHER MANAGEMENT
+===================================================== -->
+
+<section class="section" id="teachers">
+
+    <h2 class="section-title">
+        👩‍🏫 Teacher <span>Management</span>
+    </h2>
+
+    <div class="admin-box">
+
+        <!-- LOGIN -->
+
+        <div id="teacherLogin">
+
+            <h3 style="text-align:center;color:#1565c0;">
+                🔐 Teacher / Admin Login
+            </h3>
+
+            <p style="text-align:center;">
+                Enter admin password to access teacher tools.
+            </p>
+
+            <input
+                class="input"
+                type="password"
+                id="teacherPassword"
+                placeholder="Enter Password">
+
+            <button
+                class="btn btn-primary"
+                onclick="teacherLogin()">
+                🔓 Login
+            </button>
+
+            <p id="loginMessage" class="login-message"></p>
+
+        </div>
+
+
+        <!-- TEACHER PANEL -->
+
+        <div id="teacherPanel" class="teacher-panel">
+
+            <h3 style="text-align:center;color:#1565c0;">
+                👩‍🏫 Teacher ID Card Generator
+            </h3>
+
+            <input
+                class="input"
+                id="teacherName"
+                placeholder="Teacher Name">
+
+            <input
+                class="input"
+                id="teacherSubject"
+                placeholder="Subject / Department">
+
+            <input
+                class="input"
+                id="teacherQualification"
+                placeholder="Qualification">
+
+            <input
+                class="input"
+                id="teacherPhone"
+                placeholder="Phone Number">
+
+            <input
+                class="input"
+                id="teacherDob"
+                type="date">
+
+            <label>
+                <b>Teacher Photo:</b>
+            </label>
+
+            <input
+                class="input"
+                id="teacherPhoto"
+                type="file"
+                accept="image/*">
+
+            <button
+                class="btn btn-orange"
+                onclick="generateTeacherID()">
+                🎫 Generate Teacher ID
+            </button>
+
+            <button
+                class="btn"
+                style="background:#d32f2f;color:white;"
+                onclick="teacherLogout()">
+                🚪 Logout
+            </button>
+
+            <div id="teacherIDOutput"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+    <h2>📞 Contact Siddharth Playway School</h2>
 
     <p>
-      We provide quality education in a safe, friendly and joyful
-      learning environment. Our focus is on the overall development
-      of every child through play-way learning, phonics and creative activities.
+        📱 Phone:
+        <a href="tel:9958670331">
+            9958670331
+        </a>
     </p>
 
-    <a href="#contact" class="button">Contact Us</a>
-  </section>
+    <p>
+        📧 Email:
+        <a href="mailto:st1352561@gmail.com">
+            st1352561@gmail.com
+        </a>
+    </p>
 
-  <section class="section" id="about">
-    <h2>About Our School</h2>
+    <p>
+        📍 Address:
+        Gali No. 6, Sahibabad,
+        Ghaziabad, Uttar Pradesh
+    </p>
 
-    <div class="cards">
+    <div class="buttons">
 
-      <div class="card">
-        <h3>👩‍🏫 Expert Teachers</h3>
-        <p>
-          Experienced and dedicated teachers guide every child
-          towards better learning and development.
-        </p>
-      </div>
+        <a
+            class="btn btn-green"
+            href="https://wa.me/919958670331"
+            target="_blank">
+            💬 WhatsApp
+        </a>
 
-      <div class="card">
-        <h3>🎨 Play-Way Learning</h3>
-        <p>
-          Children learn through fun activities, games,
-          creativity and practical experiences.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>📚 Phonics Learning</h3>
-        <p>
-          Special focus on phonics and strong foundational
-          learning for young learners.
-        </p>
-      </div>
+        <a
+            class="btn btn-orange"
+            href="tel:9958670331">
+            📞 Call Now
+        </a>
 
     </div>
-  </section>
 
-  <section class="section" id="classes">
-    <h2>Our Classes</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Nursery</h3>
-        <p>Fun-based early childhood learning.</p>
-      </div>
-
-      <div class="card">
-        <h3>LKG</h3>
-        <p>Strong foundation with creative activities.</p>
-      </div>
-
-      <div class="card">
-        <h3>UKG</h3>
-        <p>Phonics, activities and school readiness.</p>
-      </div>
-
-      <div class="card">
-        <h3>Other Classes</h3>
-        <p>Guidance and learning support for students.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-
-    <p>📞 Phone: 9958670331</p>
-    <p>📧 Email: st1352561@gmail.com</p>
-    <p>📍 Address: Gali No. 6</p>
-  </section>
-
-  <footer>
-    <p>© 2026 Siddharth Playway School. All Rights Reserved.</p>
-  </footer>
-  <section id="results">
-  <h2>📝 Test & Quiz Results</h2>
-
-  <input type="text" id="studentName" placeholder="Student Name">
-  <input type="text" id="studentClass" placeholder="Class">
-  <input type="text" id="subject" placeholder="Subject">
-  <input type="number" id="marks" placeholder="Obtained Marks">
-  <input type="number" id="total" placeholder="Total Marks">
-
-  <button onclick="showResult()">View Result</button>
-
-  <div id="resultBox"></div>
 </section>
 
-<script>
-function showResult() {
-  let name = document.getElementById("studentName").value;
-  let studentClass = document.getElementById("studentClass").value;
-  let subject = document.getElementById("subject").value;
-  let marks = Number(document.getElementById("marks").value);
-  let total = Number(document.getElementById("total").value);
 
-  let percentage = (marks / total) * 100;
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-  document.getElementById("resultBox").innerHTML =
-    "<h3>🎉 Result</h3>" +
-    "<p>Name: " + name + "</p>" +
-    "<p>Class: " + studentClass + "</p>" +
-    "<p>Subject: " + subject + "</p>" +
-    "<p>Marks: " + marks + " / " + total + "</p>" +
-    "<p>Percentage: " + percentage.toFixed(1) + "%</p>";
-}
-</script>
-  <section id="student-id">
-  <h2>🎫 Student ID Card Generator</h2>
+<footer>
 
-  <input type="text" id="idName" placeholder="Student Name">
-  <input type="text" id="idClass" placeholder="Class">
-  <input type="text" id="idDob" placeholder="Date of Birth">
-  <input type="text" id="idPhone" placeholder="Parent Contact Number">
+    <p>
+        © 2026 Siddharth Playway School
+    </p>
 
-  <br><br>
+    <p>
+        Gali No. 6, Sahibabad, Ghaziabad, U.P.
+    </p>
 
-  <label>Student Photo:</label>
-  <input type="file" id="idPhoto" accept="image/*">
+    <p>
+        Quality Education • Caring Environment
+    </p>
 
-  <br><br>
+</footer>
 
-  <button onclick="generateID()">Generate ID Card</button>
 
-  <div id="idCard" style="margin-top:20px;"></div>
-</section>
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919958670331"
+    target="_blank"
+    title="WhatsApp">
+    💬
+</a>
+
+
+<!-- QR CODE LIBRARY -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-<script>
-function generateID() {
-
-  let name = document.getElementById("idName").value.trim();
-  let studentClass = document.getElementById("idClass").value.trim();
-  let dob = document.getElementById("idDob").value.trim();
-  let phone = document.getElementById("idPhone").value.trim();
-
-  let photoFile = document.getElementById("idPhoto").files[0];
-
-  if (!name || !studentClass) {
-    alert("Please enter Student Name and Class");
-    return;
-  }
-
-  let studentID = "SPS-" + Math.floor(1000 + Math.random() * 9000);
-
-  let photoURL = "";
-
-  if (photoFile) {
-    photoURL = URL.createObjectURL(photoFile);
-  }
-
-  document.getElementById("idCard").innerHTML = `
-    
-    <div id="printCard" style="
-      width:350px;
-      min-height:500px;
-      padding:20px;
-      margin:auto;
-      background:white;
-      border:3px solid #1e3a8a;
-      border-radius:20px;
-      text-align:center;
-      font-family:Arial;
-      box-shadow:0 5px 20px rgba(0,0,0,0.2);
-    ">
-
-      <h2 style="
-        color:#1e3a8a;
-        margin-bottom:5px;
-      ">
-        Siddharth Playway School
-      </h2>
-
-      <p style="
-        margin-top:0;
-        color:#555;
-        font-weight:bold;
-      ">
-        🎓 STUDENT ID CARD
-      </p>
-
-      ${
-        photoURL
-        ? `<img src="${photoURL}" style="
-            width:110px;
-            height:130px;
-            object-fit:cover;
-            border:3px solid #1e3a8a;
-            border-radius:10px;
-            margin:10px;
-          ">`
-        : `<div style="
-            width:110px;
-            height:130px;
-            margin:10px auto;
-            border:2px dashed #777;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#777;
-          ">
-            Photo
-          </div>`
-      }
-
-      <div style="
-        text-align:left;
-        padding:10px 20px;
-        line-height:1.8;
-      ">
-
-        <p><b>Name:</b> ${name}</p>
-
-        <p><b>Class:</b> ${studentClass}</p>
-
-        <p><b>Date of Birth:</b> ${dob || "Not Provided"}</p>
-
-        <p><b>Parent Contact:</b> ${phone || "Not Provided"}</p>
-
-        <p><b>Student ID:</b> ${studentID}</p>
-
-      </div>
-
-      <div id="qrcode" style="
-        margin:10px auto;
-        width:120px;
-      "></div>
-
-      <p style="
-        font-size:12px;
-        color:#555;
-      ">
-        Scan QR Code for Student Information
-      </p>
-
-      <hr>
-
-      <p style="
-        font-size:12px;
-        color:#333;
-      ">
-        Siddharth Playway School
-      </p>
-
-      <p style="
-        font-size:11px;
-        color:#555;
-      ">
-        Quality Education • Caring Environment
-      </p>
-
-    </div>
-
-    <br>
-
-    <button onclick="printID()" style="
-      padding:10px 20px;
-      background:#1e3a8a;
-      color:white;
-      border:none;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-    ">
-      🖨️ Print ID Card
-    </button>
-  `;
-
-  new QRCode(document.getElementById("qrcode"), {
-    text:
-      "Siddharth Playway School\n" +
-      "Student Name: " + name + "\n" +
-      "Class: " + studentClass + "\n" +
-      "Student ID: " + studentID + "\n" +
-      "Parent Contact: " + phone,
-
-    width:120,
-    height:120
-  });
-}
-
-
-function printID() {
-
-  let card = document.getElementById("printCard").innerHTML;
-
-  let printWindow = window.open("", "", "width=600,height=800");
-
-  printWindow.document.write(`
-    <html>
-    <head>
-      <title>Student ID Card</title>
-
-      <style>
-        body {
-          font-family: Arial;
-          display:flex;
-          justify-content:center;
-          padding-top:20px;
-        }
-      </style>
-
-    </head>
-
-    <body>
-      <div>
-        ${card}
-      </div>
-    </body>
-
-    </html>
-  `);
-
-  printWindow.document.close();
-  printWindow.print();
-}
-</script>
-<!-- ================= TEACHER MANAGEMENT ================= -->
-
-<section id="teachers" class="section">
-
-  <h2>👩‍🏫 Teacher Management</h2>
-
-  <!-- Password Login -->
-  <div id="teacherLogin" style="
-    max-width:400px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 12px #ddd;
-    text-align:center;
-  ">
-
-    <h3>🔐 Teacher/Admin Login</h3>
-
-    <p style="margin:10px 0;">
-      Enter password to access teacher management.
-    </p>
-
-    <input
-      type="password"
-      id="teacherPassword"
-      placeholder="Enter Password"
-      style="
-        width:100%;
-        padding:12px;
-        margin:10px 0;
-        border:1px solid #ccc;
-        border-radius:8px;
-      "
-    >
-
-    <button onclick="teacherLogin()" style="
-      background:#1565c0;
-      color:white;
-      border:none;
-      padding:12px 25px;
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:bold;
-    ">
-      🔓 Login
-    </button>
-
-    <p id="loginMessage" style="color:red;margin-top:10px;"></p>
-
-  </div>
-
-
-  <!-- Teacher Panel -->
-  <div id="teacherPanel" style="
-    display:none;
-    max-width:800px;
-    margin:25px auto;
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 4px 15px #ddd;
-  ">
-
-    <h3 style="text-align:center;color:#1565c0;">
-      👩‍🏫 Teacher ID Card Generator
-    </h3>
-
-    <input
-      type="text"
-      id="teacherName"
-      placeholder="Teacher Name"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherSubject"
-      placeholder="Subject / Department"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherQualification"
-      placeholder="Qualification"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherPhone"
-      placeholder="Phone Number"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherDob"
-      placeholder="Date of Birth"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <label>
-      <b>Teacher Photo:</b>
-    </label>
-
-    <input
-      type="file"
-      id="teacherPhoto"
-      accept="image/*"
-      style="width:100%;padding:10px;margin:8px 0;"
-    >
-
-    <button onclick="generateTeacherID()" style="
-      background:#ff9800;
-      color:white;
-      border:none;
-      padding:13px 25px;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-      font-weight:bold;
-      margin-top:10px;
-    ">
-      🎫 Generate Teacher ID
-    </button>
-
-    <button onclick="teacherLogout()" style="
-      background:#d32f2f;
-      color:white;
-      border:none;
-      padding:13px 25px;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-      font-weight:bold;
-      margin-left:8px;
-    ">
-      Logout
-    </button>
-
-    <div id="teacherIDCard" style="margin-top:25px;"></div>
-
-  </div>
-
-</section>
-
 
 <script>
 
-/* ================= TEACHER LOGIN ================= */
+/* =====================================================
+   FEMALE VOICE
+===================================================== */
 
-function teacherLogin() {
+function speakWelcome(){
 
-  const password =
-    document.getElementById("teacherPassword").value;
+    if(!("speechSynthesis" in window)){
 
-  if (password === "93054") {
+        alert("Your browser does not support voice.");
 
-    document.getElementById("teacherLogin").style.display = "none";
+        return;
+    }
 
-    document.getElementById("teacherPanel").style.display = "block";
+    window.speechSynthesis.cancel();
 
-    document.getElementById("loginMessage").innerHTML = "";
+    const message =
+    "Welcome to Siddharth Playway School. " +
+    "Gali Number 6, Sahibabad, Ghaziabad, Uttar Pradesh. " +
+    "We provide quality education in a safe, friendly and joyful learning environment. " +
+    "Thank you for visiting Siddharth Playway School.";
 
-  } else {
+    const speech =
+    new SpeechSynthesisUtterance(message);
 
-    document.getElementById("loginMessage").innerHTML =
-      "❌ Incorrect password";
+    speech.lang = "en-IN";
+    speech.rate = 0.85;
+    speech.pitch = 1.1;
+    speech.volume = 1;
 
-  }
+    const voices =
+    window.speechSynthesis.getVoices();
+
+    const femaleVoice =
+    voices.find(v =>
+        /female|zira|samantha|google.*female/i.test(v.name)
+    );
+
+    if(femaleVoice){
+        speech.voice = femaleVoice;
+    }
+
+    window.speechSynthesis.speak(speech);
 }
 
 
-/* ================= TEACHER LOGOUT ================= */
+function stopVoice(){
 
-function teacherLogout() {
-
-  document.getElementById("teacherPanel").style.display = "none";
-
-  document.getElementById("teacherLogin").style.display = "block";
-
-  document.getElementById("teacherPassword").value = "";
+    window.speechSynthesis.cancel();
 
 }
 
 
-/* ================= TEACHER ID CARD ================= */
+/* =====================================================
+   RESULT
+===================================================== */
 
-function generateTeacherID() {
+function showResult(){
 
-  const name =
-    document.getElementById("teacherName").value.trim();
+    const name =
+    document.getElementById("studentName").value.trim();
 
-  const subject =
-    document.getElementById("teacherSubject").value.trim();
+    const studentClass =
+    document.getElementById("studentClass").value.trim();
 
-  const qualification =
-    document.getElementById("teacherQualification").value.trim();
+    const subject =
+    document.getElementById("subject").value.trim();
 
-  const phone =
-    document.getElementById("teacherPhone").value.trim();
+    const marks =
+    Number(document.getElementById("marks").value);
 
-  const dob =
-    document.getElementById("teacherDob").value.trim();
-
-  const photoFile =
-    document.getElementById("teacherPhoto").files[0];
-
-
-  if (!name || !subject) {
-
-    alert("Please enter Teacher Name and Subject.");
-
-    return;
-  }
+    const total =
+    Number(document.getElementById("total").value);
 
 
-  /* Generate Teacher ID */
+    if(
+        !name ||
+        !studentClass ||
+        !subject ||
+        !total ||
+        marks < 0 ||
+        total <= 0 ||
+        marks > total
+    ){
 
-  const teacherID =
-    "SPS-T-" +
+        alert(
+            "Please enter correct student details and marks."
+        );
+
+        return;
+    }
+
+
+    const percentage =
+    (marks / total) * 100;
+
+
+    let grade = "";
+
+    if(percentage >= 90){
+        grade = "A+";
+    }
+    else if(percentage >= 80){
+        grade = "A";
+    }
+    else if(percentage >= 70){
+        grade = "B+";
+    }
+    else if(percentage >= 60){
+        grade = "B";
+    }
+    else if(percentage >= 50){
+        grade = "C";
+    }
+    else if(percentage >= 33){
+        grade = "D";
+    }
+    else{
+        grade = "Fail";
+    }
+
+
+    const resultBox =
+    document.getElementById("resultBox");
+
+    resultBox.style.display = "block";
+
+    resultBox.innerHTML = `
+
+        <h3>🎉 Result</h3>
+
+        <p>
+            <b>Name:</b>
+            ${escapeHTML(name)}
+        </p>
+
+        <p>
+            <b>Class:</b>
+            ${escapeHTML(studentClass)}
+        </p>
+
+        <p>
+            <b>Subject:</b>
+            ${escapeHTML(subject)}
+        </p>
+
+        <p>
+            <b>Marks:</b>
+            ${marks} / ${total}
+        </p>
+
+        <p>
+            <b>Percentage:</b>
+            ${percentage.toFixed(1)}%
+        </p>
+
+        <p>
+            <b>Grade:</b>
+            ${grade}
+        </p>
+
+    `;
+}
+
+
+/* =====================================================
+   STUDENT ID
+===================================================== */
+
+function generateStudentID(){
+
+    const name =
+    document.getElementById("idName").value.trim();
+
+    const studentClass =
+    document.getElementById("idClass").value.trim();
+
+    const dob =
+    document.getElementById("idDob").value;
+
+    const phone =
+    document.getElementById("idPhone").value.trim();
+
+    const photo =
+    document.getElementById("idPhoto").files[0];
+
+
+    if(!name || !studentClass){
+
+        alert(
+            "Please enter Student Name and Class."
+        );
+
+        return;
+    }
+
+
+    const studentID =
+    "SPS-" +
+    new Date().getFullYear() +
+    "-" +
     Math.floor(1000 + Math.random() * 9000);
 
 
-  let photoURL = "";
+    let photoURL = "";
 
-  if (photoFile) {
-
-    photoURL =
-      URL.createObjectURL(photoFile);
-
-  }
+    if(photo){
+        photoURL =
+        URL.createObjectURL(photo);
+    }
 
 
-  document.getElementById("teacherIDCard").innerHTML = `
+    document.getElementById(
+        "studentIDOutput"
+    ).innerHTML = `
 
-    <div id="printTeacherCard" style="
-      width:350px;
-      min-height:520px;
-      padding:20px;
-      margin:auto;
-      background:white;
-      border:3px solid #1565c0;
-      border-radius:20px;
-      text-align:center;
-      font-family:Arial,sans-serif;
-      box-shadow:0 5px 20px rgba(0,0,0,0.2);
-    ">
-
-      <h2 style="
-        color:#1565c0;
-        margin-bottom:5px;
-      ">
-        Siddharth Playway School
-      </h2>
-
-      <p style="
-        color:#555;
-        font-weight:bold;
-        margin-top:0;
-      ">
-        👩‍🏫 TEACHER ID CARD
-      </p>
-
-
-      ${
-        photoURL
-
-        ? `
-
-        <img
-          src="${photoURL}"
-          style="
-            width:110px;
-            height:130px;
-            object-fit:cover;
-            border:3px solid #1565c0;
-            border-radius:10px;
-            margin:12px;
-          "
+        <div
+            id="studentPrintArea"
+            class="id-card"
         >
 
-        `
+            <h2 style="color:#1565c0;">
+                🏫 Siddharth Playway School
+            </h2>
 
-        :
+            <p>
+                <b>🎓 STUDENT ID CARD</b>
+            </p>
 
-        `
+            ${
+                photoURL
 
-        <div style="
-          width:110px;
-          height:130px;
-          margin:12px auto;
-          border:2px dashed #777;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          color:#777;
-        ">
-          Photo
+                ?
+
+                `<img
+                    src="${photoURL}"
+                    alt="Student Photo"
+                >`
+
+                :
+
+                `<div style="
+                    width:115px;
+                    height:135px;
+                    margin:15px auto;
+                    border:2px dashed #777;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+                    Photo
+                </div>`
+            }
+
+            <div class="id-details">
+
+                <p>
+                    <b>Name:</b>
+                    ${escapeHTML(name)}
+                </p>
+
+                <p>
+                    <b>Class:</b>
+                    ${escapeHTML(studentClass)}
+                </p>
+
+                <p>
+                    <b>Date of Birth:</b>
+                    ${dob || "Not Provided"}
+                </p>
+
+                <p>
+                    <b>Parent Contact:</b>
+                    ${escapeHTML(phone || "Not Provided")}
+                </p>
+
+                <p>
+                    <b>Student ID:</b>
+                    ${studentID}
+                </p>
+
+            </div>
+
+            <div
+                id="studentQR"
+                style="margin:15px auto;width:120px;">
+            </div>
+
+            <small>
+                Scan QR for Student Information
+            </small>
+
+            <hr style="margin:15px 0;">
+
+            <small>
+                Quality Education • Caring Environment
+            </small>
+
         </div>
 
-        `
-      }
+        <div style="text-align:center;">
+
+            <button
+                class="btn btn-primary"
+                onclick="printStudentID()">
+                🖨️ Print ID Card
+            </button>
+
+        </div>
+
+    `;
 
 
-      <div style="
-        text-align:left;
-        padding:10px 20px;
-        line-height:1.8;
-      ">
+    new QRCode(
+        document.getElementById("studentQR"),
+        {
+            text:
+            "Siddharth Playway School\n" +
+            "Student: " + name + "\n" +
+            "Class: " + studentClass + "\n" +
+            "Student ID: " + studentID,
 
-        <p>
-          <b>Name:</b>
-          ${escapeHTML(name)}
-        </p>
-
-        <p>
-          <b>Subject:</b>
-          ${escapeHTML(subject)}
-        </p>
-
-        <p>
-          <b>Qualification:</b>
-          ${escapeHTML(qualification || "Not Provided")}
-        </p>
-
-        <p>
-          <b>Date of Birth:</b>
-          ${escapeHTML(dob || "Not Provided")}
-        </p>
-
-        <p>
-          <b>Phone:</b>
-          ${escapeHTML(phone || "Not Provided")}
-        </p>
-
-        <p>
-          <b>Teacher ID:</b>
-          ${teacherID}
-        </p>
-
-      </div>
-
-
-      <div id="teacherQRCode"
-        style="
-          margin:10px auto;
-          width:120px;
-        ">
-      </div>
-
-
-      <p style="
-        font-size:12px;
-        color:#555;
-      ">
-        Scan QR Code for Teacher Information
-      </p>
-
-      <hr>
-
-      <p style="
-        font-size:12px;
-        color:#333;
-      ">
-        Siddharth Playway School
-      </p>
-
-      <p style="
-        font-size:11px;
-        color:#555;
-      ">
-        Quality Education • Caring Environment
-      </p>
-
-    </div>
-
-    <br>
-
-    <button onclick="printTeacherID()" style="
-      display:block;
-      margin:auto;
-      padding:12px 25px;
-      background:#1565c0;
-      color:white;
-      border:none;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-    ">
-      🖨️ Print Teacher ID Card
-    </button>
-
-  `;
-
-
-  /* Generate QR Code */
-
-  new QRCode(
-    document.getElementById("teacherQRCode"),
-    {
-      text:
-        "Siddharth Playway School\n" +
-        "Teacher Name: " + name + "\n" +
-        "Subject: " + subject + "\n" +
-        "Qualification: " + qualification + "\n" +
-        "Teacher ID: " + teacherID,
-
-      width:120,
-      height:120
-    }
-  );
+            width:120,
+            height:120
+        }
+    );
 
 }
 
 
-/* ================= PRINT TEACHER CARD ================= */
+function printStudentID(){
 
-function printTeacherID() {
+    const card =
+    document.getElementById(
+        "studentPrintArea"
+    ).outerHTML;
 
-  const card =
-    document.getElementById("printTeacherCard").outerHTML;
 
-
-  const printWindow =
+    const printWindow =
     window.open(
-      "",
-      "",
-      "width=600,height=800"
+        "",
+        "",
+        "width=600,height=800"
     );
 
 
-  printWindow.document.write(`
+    printWindow.document.write(`
 
-    <!DOCTYPE html>
+        <!DOCTYPE html>
 
-    <html>
+        <html>
 
-    <head>
+        <head>
 
-      <title>
-        Teacher ID Card
-      </title>
+            <title>
+                Student ID Card
+            </title>
 
-      <style>
+            <style>
 
-        body {
-          font-family:Arial;
-          display:flex;
-          justify-content:center;
-          padding-top:20px;
-        }
+                body{
+                    font-family:Arial;
+                    display:flex;
+                    justify-content:center;
+                    padding:20px;
+                }
 
-        @media print {
+            </style>
 
-          body {
-            padding:0;
-          }
+        </head>
 
-        }
+        <body>
 
-      </style>
+            ${card}
 
-    </head>
+        </body>
 
-    <body>
+        </html>
 
-      ${card}
-
-    </body>
-
-    </html>
-
-  `);
+    `);
 
 
-  printWindow.document.close();
+    printWindow.document.close();
 
-  printWindow.focus();
+    printWindow.focus();
 
-  setTimeout(function() {
+    setTimeout(
+        () => printWindow.print(),
+        500
+    );
+}
 
-    printWindow.print();
 
-  }, 500);
+/* =====================================================
+   TEACHER LOGIN
+===================================================== */
+
+function teacherLogin(){
+
+    const password =
+    document.getElementById(
+        "teacherPassword"
+    ).value;
+
+
+    /*
+       IMPORTANT:
+       Change password here.
+
+       Current password = 93054
+    */
+
+    if(password === "93054"){
+
+        document.getElementById(
+            "teacherLogin"
+        ).style.display = "none";
+
+
+        document.getElementById(
+            "teacherPanel"
+        ).style.display = "block";
+
+
+        document.getElementById(
+            "loginMessage"
+        ).innerHTML = "";
+
+    }
+    else{
+
+        document.getElementById(
+            "loginMessage"
+        ).innerHTML =
+        "❌ Incorrect password";
+
+    }
 
 }
 
 
-/* ================= SECURITY HELPER ================= */
+function teacherLogout(){
 
-function escapeHTML(value) {
-
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-
-}
-
-</script>
-<!-- ================= TEACHER MANAGEMENT ================= -->
-
-<section id="teachers" class="section">
-
-  <h2>👩‍🏫 Teacher Management</h2>
-
-  <!-- Password Login -->
-  <div id="teacherLogin" style="
-    max-width:400px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 12px #ddd;
-    text-align:center;
-  ">
-
-    <h3>🔐 Teacher/Admin Login</h3>
-
-    <p style="margin:10px 0;">
-      Enter password to access teacher management.
-    </p>
-
-    <input
-      type="password"
-      id="teacherPassword"
-      placeholder="Enter Password"
-      style="
-        width:100%;
-        padding:12px;
-        margin:10px 0;
-        border:1px solid #ccc;
-        border-radius:8px;
-      "
-    >
-
-    <button onclick="teacherLogin()" style="
-      background:#1565c0;
-      color:white;
-      border:none;
-      padding:12px 25px;
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:bold;
-    ">
-      🔓 Login
-    </button>
-
-    <p id="loginMessage" style="color:red;margin-top:10px;"></p>
-
-  </div>
+    document.getElementById(
+        "teacherPanel"
+    ).style.display = "none";
 
 
-  <!-- Teacher Panel -->
-  <div id="teacherPanel" style="
-    display:none;
-    max-width:800px;
-    margin:25px auto;
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 4px 15px #ddd;
-  ">
-
-    <h3 style="text-align:center;color:#1565c0;">
-      👩‍🏫 Teacher ID Card Generator
-    </h3>
-
-    <input
-      type="text"
-      id="teacherName"
-      placeholder="Teacher Name"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherSubject"
-      placeholder="Subject / Department"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherQualification"
-      placeholder="Qualification"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherPhone"
-      placeholder="Phone Number"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <input
-      type="text"
-      id="teacherDob"
-      placeholder="Date of Birth"
-      style="width:100%;padding:12px;margin:8px 0;"
-    >
-
-    <label>
-      <b>Teacher Photo:</b>
-    </label>
-
-    <input
-      type="file"
-      id="teacherPhoto"
-      accept="image/*"
-      style="width:100%;padding:10px;margin:8px 0;"
-    >
-
-    <button onclick="generateTeacherID()" style="
-      background:#ff9800;
-      color:white;
-      border:none;
-      padding:13px 25px;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-      font-weight:bold;
-      margin-top:10px;
-    ">
-      🎫 Generate Teacher ID
-    </button>
-
-    <button onclick="teacherLogout()" style="
-      background:#d32f2f;
-      color:white;
-      border:none;
-      padding:13px 25px;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-      font-weight:bold;
-      margin-left:8px;
-    ">
-      Logout
-    </button>
-
-    <div id="teacherIDCard" style="margin-top:25px;"></div>
-
-  </div>
-
-</section>
+    document.getElementById(
+        "teacherLogin"
+    ).style.display = "block";
 
 
-<script>
-
-/* ================= TEACHER LOGIN ================= */
-
-function teacherLogin() {
-
-  const password =
-    document.getElementById("teacherPassword").value;
-
-  if (password === "93054") {
-
-    document.getElementById("teacherLogin").style.display = "none";
-
-    document.getElementById("teacherPanel").style.display = "block";
-
-    document.getElementById("loginMessage").innerHTML = "";
-
-  } else {
-
-    document.getElementById("loginMessage").innerHTML =
-      "❌ Incorrect password";
-
-  }
-}
-
-
-/* ================= TEACHER LOGOUT ================= */
-
-function teacherLogout() {
-
-  document.getElementById("teacherPanel").style.display = "none";
-
-  document.getElementById("teacherLogin").style.display = "block";
-
-  document.getElementById("teacherPassword").value = "";
+    document.getElementById(
+        "teacherPassword"
+    ).value = "";
 
 }
 
 
-/* ================= TEACHER ID CARD ================= */
+/* =====================================================
+   TEACHER ID
+===================================================== */
 
-function generateTeacherID() {
+function generateTeacherID(){
 
-  const name =
-    document.getElementById("teacherName").value.trim();
-
-  const subject =
-    document.getElementById("teacherSubject").value.trim();
-
-  const qualification =
-    document.getElementById("teacherQualification").value.trim();
-
-  const phone =
-    document.getElementById("teacherPhone").value.trim();
-
-  const dob =
-    document.getElementById("teacherDob").value.trim();
-
-  const photoFile =
-    document.getElementById("teacherPhoto").files[0];
+    const name =
+    document.getElementById(
+        "teacherName"
+    ).value.trim();
 
 
-  if (!name || !subject) {
-
-    alert("Please enter Teacher Name and Subject.");
-
-    return;
-  }
+    const subject =
+    document.getElementById(
+        "teacherSubject"
+    ).value.trim();
 
 
-  /* Generate Teacher ID */
+    const qualification =
+    document.getElementById(
+        "teacherQualification"
+    ).value.trim();
 
-  const teacherID =
+
+    const phone =
+    document.getElementById(
+        "teacherPhone"
+    ).value.trim();
+
+
+    const dob =
+    document.getElementById(
+        "teacherDob"
+    ).value;
+
+
+    const photo =
+    document.getElementById(
+        "teacherPhoto"
+    ).files[0];
+
+
+    if(!name || !subject){
+
+        alert(
+            "Please enter Teacher Name and Subject."
+        );
+
+        return;
+    }
+
+
+    const teacherID =
     "SPS-T-" +
-    Math.floor(1000 + Math.random() * 9000);
-
-
-  let photoURL = "";
-
-  if (photoFile) {
-
-    photoURL =
-      URL.createObjectURL(photoFile);
-
-  }
-
-
-  document.getElementById("teacherIDCard").innerHTML = `
-
-    <div id="printTeacherCard" style="
-      width:350px;
-      min-height:520px;
-      padding:20px;
-      margin:auto;
-      background:white;
-      border:3px solid #1565c0;
-      border-radius:20px;
-      text-align:center;
-      font-family:Arial,sans-serif;
-      box-shadow:0 5px 20px rgba(0,0,0,0.2);
-    ">
-
-      <h2 style="
-        color:#1565c0;
-        margin-bottom:5px;
-      ">
-        Siddharth Playway School
-      </h2>
-
-      <p style="
-        color:#555;
-        font-weight:bold;
-        margin-top:0;
-      ">
-        👩‍🏫 TEACHER ID CARD
-      </p>
-
-
-      ${
-        photoURL
-
-        ? `
-
-        <img
-          src="${photoURL}"
-          style="
-            width:110px;
-            height:130px;
-            object-fit:cover;
-            border:3px solid #1565c0;
-            border-radius:10px;
-            margin:12px;
-          "
-        >
-
-        `
-
-        :
-
-        `
-
-        <div style="
-          width:110px;
-          height:130px;
-          margin:12px auto;
-          border:2px dashed #777;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          color:#777;
-        ">
-          Photo
-        </div>
-
-        `
-      }
-
-
-      <div style="
-        text-align:left;
-        padding:10px 20px;
-        line-height:1.8;
-      ">
-
-        <p>
-          <b>Name:</b>
-          ${escapeHTML(name)}
-        </p>
-
-        <p>
-          <b>Subject:</b>
-          ${escapeHTML(subject)}
-        </p>
-
-        <p>
-          <b>Qualification:</b>
-          ${escapeHTML(qualification || "Not Provided")}
-        </p>
-
-        <p>
-          <b>Date of Birth:</b>
-          ${escapeHTML(dob || "Not Provided")}
-        </p>
-
-        <p>
-          <b>Phone:</b>
-          ${escapeHTML(phone || "Not Provided")}
-        </p>
-
-        <p>
-          <b>Teacher ID:</b>
-          ${teacherID}
-        </p>
-
-      </div>
-
-
-      <div id="teacherQRCode"
-        style="
-          margin:10px auto;
-          width:120px;
-        ">
-      </div>
-
-
-      <p style="
-        font-size:12px;
-        color:#555;
-      ">
-        Scan QR Code for Teacher Information
-      </p>
-
-      <hr>
-
-      <p style="
-        font-size:12px;
-        color:#333;
-      ">
-        Siddharth Playway School
-      </p>
-
-      <p style="
-        font-size:11px;
-        color:#555;
-      ">
-        Quality Education • Caring Environment
-      </p>
-
-    </div>
-
-    <br>
-
-    <button onclick="printTeacherID()" style="
-      display:block;
-      margin:auto;
-      padding:12px 25px;
-      background:#1565c0;
-      color:white;
-      border:none;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:16px;
-    ">
-      🖨️ Print Teacher ID Card
-    </button>
-
-  `;
-
-
-  /* Generate QR Code */
-
-  new QRCode(
-    document.getElementById("teacherQRCode"),
-    {
-      text:
-        "Siddharth Playway School\n" +
-        "Teacher Name: " + name + "\n" +
-        "Subject: " + subject + "\n" +
-        "Qualification: " + qualification + "\n" +
-        "Teacher ID: " + teacherID,
-
-      width:120,
-      height:120
-    }
-  );
-
-}
-
-
-/* ================= PRINT TEACHER CARD ================= */
-
-function printTeacherID() {
-
-  const card =
-    document.getElementById("printTeacherCard").outerHTML;
-
-
-  const printWindow =
-    window.open(
-      "",
-      "",
-      "width=600,height=800"
+    Math.floor(
+        1000 + Math.random() * 9000
     );
 
 
-  printWindow.document.write(`
+    let photoURL = "";
 
-    <!DOCTYPE html>
+    if(photo){
 
-    <html>
+        photoURL =
+        URL.createObjectURL(photo);
 
-    <head>
+    }
 
-      <title>
-        Teacher ID Card
-      </title>
 
-      <style>
+    document.getElementById(
+        "teacherIDOutput"
+    ).innerHTML = `
 
-        body {
-          font-family:Arial;
-          display:flex;
-          justify-content:center;
-          padding-top:20px;
+        <div
+            id="teacherPrintArea"
+            class="id-card"
+        >
+
+            <h2 style="color:#1565c0;">
+                🏫 Siddharth Playway School
+            </h2>
+
+            <p>
+                <b>👩‍🏫 TEACHER ID CARD</b>
+            </p>
+
+            ${
+                photoURL
+
+                ?
+
+                `<img
+                    src="${photoURL}"
+                    alt="Teacher Photo"
+                >`
+
+                :
+
+                `<div style="
+                    width:115px;
+                    height:135px;
+                    margin:15px auto;
+                    border:2px dashed #777;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+                    Photo
+                </div>`
+            }
+
+
+            <div class="id-details">
+
+                <p>
+                    <b>Name:</b>
+                    ${escapeHTML(name)}
+                </p>
+
+                <p>
+                    <b>Subject:</b>
+                    ${escapeHTML(subject)}
+                </p>
+
+                <p>
+                    <b>Qualification:</b>
+                    ${escapeHTML(
+                        qualification ||
+                        "Not Provided"
+                    )}
+                </p>
+
+                <p>
+                    <b>Date of Birth:</b>
+                    ${dob || "Not Provided"}
+                </p>
+
+                <p>
+                    <b>Phone:</b>
+                    ${escapeHTML(
+                        phone ||
+                        "Not Provided"
+                    )}
+                </p>
+
+                <p>
+                    <b>Teacher ID:</b>
+                    ${teacherID}
+                </p>
+
+            </div>
+
+
+            <div
+                id="teacherQR"
+                style="margin:15px auto;width:120px;">
+            </div>
+
+            <small>
+                Scan QR for Teacher Information
+            </small>
+
+            <hr style="margin:15px 0;">
+
+            <small>
+                Quality Education • Caring Environment
+            </small>
+
+        </div>
+
+
+        <div style="text-align:center;">
+
+            <button
+                class="btn btn-primary"
+                onclick="printTeacherID()">
+                🖨️ Print Teacher ID
+            </button>
+
+        </div>
+
+    `;
+
+
+    new QRCode(
+        document.getElementById("teacherQR"),
+        {
+            text:
+            "Siddharth Playway School\n" +
+            "Teacher: " + name + "\n" +
+            "Subject: " + subject + "\n" +
+            "Teacher ID: " + teacherID,
+
+            width:120,
+            height:120
         }
-
-        @media print {
-
-          body {
-            padding:0;
-          }
-
-        }
-
-      </style>
-
-    </head>
-
-    <body>
-
-      ${card}
-
-    </body>
-
-    </html>
-
-  `);
-
-
-  printWindow.document.close();
-
-  printWindow.focus();
-
-  setTimeout(function() {
-
-    printWindow.print();
-
-  }, 500);
+    );
 
 }
 
 
-/* ================= SECURITY HELPER ================= */
+function printTeacherID(){
 
-function escapeHTML(value) {
+    const card =
+    document.getElementById(
+        "teacherPrintArea"
+    ).outerHTML;
 
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+
+    const printWindow =
+    window.open(
+        "",
+        "",
+        "width=600,height=800"
+    );
+
+
+    printWindow.document.write(`
+
+        <!DOCTYPE html>
+
+        <html>
+
+        <head>
+
+            <title>
+                Teacher ID Card
+            </title>
+
+            <style>
+
+                body{
+                    font-family:Arial;
+                    display:flex;
+                    justify-content:center;
+                    padding:20px;
+                }
+
+            </style>
+
+        </head>
+
+        <body>
+
+            ${card}
+
+        </body>
+
+        </html>
+
+    `);
+
+
+    printWindow.document.close();
+
+    printWindow.focus();
+
+    setTimeout(
+        () => printWindow.print(),
+        500
+    );
+
+}
+
+
+/* =====================================================
+   SECURITY / HTML ESCAPE
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+}
+
+
+/* =====================================================
+   LOAD VOICES
+===================================================== */
+
+if("speechSynthesis" in window){
+
+    window.speechSynthesis.onvoiceschanged =
+    function(){
+
+        window.speechSynthesis.getVoices();
+
+    };
 
 }
 
@@ -1509,3 +1801,12 @@ function escapeHTML(value) {
 
 </body>
 </html>
+
+
+
+   
+  
+   
+  
+
+  
